@@ -1,0 +1,4 @@
+-author("shree@ybrantdigital.com").
+-define(COUCHDB_URL, "http://localhost:5984/").
+-define(COUCHDB_TEXT_GRAPHICS, "videos/").
+-define(NEWS_PER_PAGE, 10).

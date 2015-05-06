@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!-- <html ng-app="movieCrush"> -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>TheMovieCrush.com</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+		<script language="javascript" src="/js/html5.js"></script>
+		<!--<script src="/js/angular.min.js"></script>		
+		<script src="/js/controller.js"></script>-->		
+		
+		<script src="/js/play_video.js"></script>
+		<script type="text/javascript" src="http://jwpsrv.com/library/5V3tOP97EeK2SxIxOUCPzg.js"></script>
+<script type="text/javascript">jwplayer.key="L0SAYMTJJs/IIkeci5tG4vgIMGHAc6YFBtmJaA==";</script></script>		
+		<script type='text/javascript' src='/js/jquery.easing.1.3.js'></script>
+		<!--<script src="/js/flowplayer/flowplayer-3.2.13.min.js"></script>-->
+		<script>
+				function showImage(src){
+					// var v = $(this).attr('src');
+					$("#gallary-picture").attr('src', src);
+				};				
+		</script>		
+<!-- google analytics start -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43119651-12', 'auto');
+
+  ga('send', 'pageview');
+
+</script>
+<!-- google analytics end -->
+	</head>
+<body>
+<!-- index.dtl -->
+<div >
+<div class="container" >
+	<div class="ad1">
+	<script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=728X90&cwpid=557677&cwwidth=728&cwheight=90&cwpnet=1&cwtagid=197749"></script>
+	</div>	
+  <header>
+	<a href="/" title="themoviecrush.com" class="logo2"><img style="width: 198px;" src="/images/logo1.png" alt=""></a>    
+    <nav> 
+      <div class="menu"> <span>MENU</span>
+        <ul class="Navigation"  >
+        <li> <a class="active"  href="/" title="Home"> Home</a></li>
+          <li> <a  href="/mostpopular?id={{movies5.value.id}}" title="Most Popular">   Most Popular</a></li>
+          <li><a   href="/interviews/{{interviews.value.id}}" title="Celebrity Interview">Celebrity Interview</a></li>
+          <li> <a   href="/more_videos" title="Movie News">Movie News</a></li>
+          <li><a   href="/music" title="Music">Music</a></li>
+        </ul>
+      </div> <!--  menu end  -->	  
+	  <div class="social"></div>
+	  </nav>	  
+   <span class="clear"></span>
+	</header>	
+   <span class="clear"></span>
+  <!-- c? ad1 end -->
+  <section class="contentarea">
+    <aside class="leftcontent">
+    {% for n in movies %}
+      <div class="module">
+        <div class="picture">
+        	 <a href="/mostpopular?id={{n.value.id}}">
+        	 	<img  title="{{n.value.title}}"  src="http://img1.contentapi.ws/{{n.value.view_image}}" />
+        	 </a>
+        </div>
+		<div class="module-inner">
+			 <!-- <a style="color: #fff;" href="/mostpopular?id={{n.id}}"><h2  >{{n.name}}</h2></a> -->
+			<div class="description" >
+		     	 <a style="color: #fff;" href="/mostpopular?id={{n.value.id}}">{{n.value.description}} {{n.value.upload_date}}</a>
+			</div>
+                  <a style="color: #A0A0A0;" href="/mostpopular?id={{n.value.id}}"> More...</a>
+		</div>
+        <!-- module-inner end -->
+      </div>
+      {% if forloop.counter ==2 %}
+      	<div class="rightad">
+	  		<script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=557677&cwwidth=250&cwheight=250&cwpnet=1&cwtagid=197748"></script>
+	  	</div> 
+      {% endif %}
+      {% if forloop.counter ==4 %}
+      	<div class="module">
+		<div class="module-inner">			
+			<p class="social-icons">
+				<a title="twitter" target="_blank" href="https://twitter.com/themoviecrush"><img src="/images/twitter.png"></a> 
+				<a title="facebook" target="_blank" href="https://www.facebook.com/pages/The-Movie-Crush/609703552456680"><img src="/images/facebook.png"></a>
+			</p>			
+		</div> 
+      </div>
+	  <!-- module end -->
+      {% endif %}
+    {% endfor %}
+      <!-- module end -->	  	  
+    </aside><!-- leftcontent end -->	
+	<div class="rightpannel">	
+	<div class="middle">
+		<div class="module video-stream">
+		  <h2>{{videoParam.title}}</h2> {{videoParam.upload_date}}
+		  <input type="hidden" name="video_val" id="video_val" value="{{videoParam.video}}" />
+		  <div id="myElement" style="display:block;width:474px;height:338px;margin:10px auto">Loading the player...</div>                 
+                <a style="color: #E2E2E2;float: right; padding-right: 7px;" href="/more_videos"> More Movie News...</a>
+	  </div><!-- video module end -->	
+        <div class="module">
+			<div class="width50">
+				<div class="box" >
+					<div class="yellow-title">
+						<a style="color: #FFFF00;" href="/interviews/{{interviews.value.id}}"> 
+							<img src="/images/video-icon.png" class="floatleft"/> CELEBRITY INTERVIEW
+						</a>
+					</div>
+					<h2 ><a style="color: #fff;" href="/interviews/{{interviews.value.id}}">{{interviews.value.name}}</a></h2>
+					<div class="description" >
+							<p ><a style="color: #fff;" href="/interviews/{{interviews.value.id}}">{{interviews.value.title}} {{interviews.value.upload_date}}</a></p>
+							<a style="color: #A0A0A0;  font-size: 14px;" href="/interviews/{{interviews.value.id}}" >More...</a>
+					</div>
+					<a  href="/interviews/{{interviews.value.id}}" >
+					<p class="social-icons">
+					<br />
+						<a title="twitter" target="_blank" href="https://twitter.com/themoviecrush"><img src="/images/twitter.png"></a> <a target="_blank" title="facebook" href="https://www.facebook.com/pages/The-Movie-Crush/609703552456680"><img src="/images/facebook.png"></a></p>
+				</div><!-- Box end -->				
+			<div class="video" >
+				<a href="/interviews/{{interviews.value.id}}">
+					<img style=" max-width: 100%;" title="{{interviews.value.name}}"  src="http://img1.contentapi.ws/{{interviews.value.view_image}}" /></a>
+				
+			</div>        
+		</div><!-- width50 end -->		
+		<div class="width50 popular">
+			<div class="popular-picture">
+				<a style="color: #FFFF00;" href="/mostpopular?id={{movies5.value.id}}" title="{{movies5.value.title}}"><img src="http://img1.contentapi.ws/{{movies5.value.view_image}}"/></a>
+			</div>
+			<div class="popular-title">
+			<a style="color: #FFFF00;" href="/mostpopular?id={{movies5.value.id}}"><img src="/images/star.png" align="absmiddle" /> MOST POPULAR</a></div>
+			<p class="social-icons1"><a title="twitter" target="_blank" href="https://twitter.com/themoviecrush"><img src="/images/twitter.png"></a> <a title="facebook" target="_blank" href="https://www.facebook.com/pages/The-Movie-Crush/609703552456680"><img src="/images/facebook.png"></a></p>
+		</div><!-- popular end -->
+      </div>
+      <!-- module end -->	  
+		<div class="module">
+		  <div class="colum1">
+			  <!-- <div class="module"> -->
+			  {% for n in movies4 %}
+				<div class="picture"  >
+					<a href="/mostpopular?id={{n.value.id}}"><img title="{{n.value.title}}"  src="http://img1.contentapi.ws/{{n.value.view_image}}" style="width:330px; height:206px;"/>
+					</a>
+				</div>
+				<div class="box" >					
+					<div>
+						<h2><a style="color: #fff;" href="/mostpopular?id={{n.value.id}}"><!-- {{n.name}} --></a></h2>
+						<div class="description"><a style="color: #fff;" href="/mostpopular?id={{n.value.id}}">{{n.value.description|slice:":50"}} {{n.value.upload_date}}</a></div>
+					</div>
+						<a style="color: #A0A0A0;" href="/mostpopular?id={{n.value.id}}"> More...
+						</a>						
+				</div>
+			  {% endfor %}
+				<!-- Box end -->
+			  <!-- </div> -->
+			  <!-- module end -->			  				  
+		  </div><!-- colum1 end -->		  
+			<div  class="ad-160x600">
+				<script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=160X600&cwpid=557677&cwwidth=160&cwheight=600&cwpnet=1&cwtagid=197747"></script>
+			</div>
+		  </div>
+		  <!-- middle Content end -->		  
+	</div>
+      <!-- middle Content end -->	
+	<aside class="sidebar">
+		<div class="photogallery">
+			<div class="yellow-title pull-right">
+			<a style="color: #FFFF00;" href="/music">  <!-- <img src="/images/camera.png" class="floatright"/> --> Music</a></div>					
+				<div class="picture">
+					<a href="/mostpopular?id={{imagegallery1.value.id}}"> 
+					<img  id = "gallary-picture" src="http://img1.contentapi.ws/{{imagegallery1.value.view_image}}" />
+					</a>
+				</div>
+				<div class="box">
+					<div ><h2> <a style="color: #fff;" href="/mostpopular?id={{imagegallery1.value.id}}"><!-- {{n.name}} --></a></h2>
+					<div class="description" ><a style="color: #fff;" href="/mostpopular?id={{imagegallery1.value.id}}">{{imagegallery1.value.description}} {{imagegallery1.value.upload_date}}</a></div></div>
+				</div>
+				<!-- {% for n in imagegallery %}				
+					<div class="picture-thumb">
+						<img src="http://img1.contentapi.ws/{{n.thumb_image}}" onclick='showImage("http://img1.contentapi.ws/{{n.thumb_image}}")' />
+					</div>
+				{% endfor %} -->
+		</div><!-- Photo Gallery end -->		
+		<div class="righttd" style="width:256px;">
+			<script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=557677&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=197748"></script>
+		</div>
+		{% for n in movies1 %}
+			<div class="module" >
+				<div class="box">
+					<div ><h2> <a style="color: #fff;" href="/mostpopular?id={{n.value.id}}"><!-- {{n.name}} --></a></h2>
+					<div class="description" ><a style="color: #fff;" href="/mostpopular?id={{n.value.id}}">{{n.value.description}} {{n.value.upload_date}}</a></div></div>
+				</div><!-- Box end -->
+				<p class="margin10_T"><a style="color: #A0A0A0;" href="/mostpopular?id={{n.value.id}}"> More...</a></p>
+				<div class="picture margin10_T">
+					<div >
+						<a  href="/mostpopular?id={{n.value.id}}">
+							<img  title="{{n.title}}" src="http://img1.contentapi.ws/{{n.value.view_image}}"/>
+						</a>
+					</div>
+					{% if forloop.counter ==1 %} 
+					<p class="social-icons1"><a  title="twitter" target="_blank" href="https://twitter.com/themoviecrush"><img src="/images/twitter.png"></a> <a target="_blank" title="facebook" href="https://www.facebook.com/pages/The-Movie-Crush/609703552456680"><img src="/images/facebook.png"></a></p>
+					{% endif %}
+				</div><!-- picture end -->
+			</div><!-- Module end -->
+		{% endfor %}
+    </aside><!-- Right Sidebar end -->		
+			
+		<!-- <aside class="middle">
+			{% for n in movies2 %}
+				<div class="module">
+					<div class="width50 picture">
+						<a  href="/mostpopular?id={{n.id}}">	
+							<img   title="{{n.name}}"  src="http://img1.contentapi.ws/{{n.thumb_image}}"/>
+						</a>
+					</div>				
+					<div class="width50">
+						<div class="box" ><div >
+							<h2 class="margin10_T"><a style="color: #fff;" href="/mostpopular?id={{n.id}}"> {{n.name}}</a></h2>
+							<div class="description"><a style="color: #fff;" href="/mostpopular?id={{n.id}}"> {{n.description}} {{n.upload_date}}</a></div></div>
+							<a style="color: #A0A0A0;" href="/mostpopular?id={{n.id}}"> More...</a>
+							<p class="margin20_T social-icons"><a target="_blank" title="twitter" href="https://twitter.com/themoviecrush"><img src="/images/twitter.png"></a> <a title="facebook" target="_blank" href="https://www.facebook.com/pages/The-Movie-Crush/609703552456680"><img src="/images/facebook.png"></a></p>
+						</div>
+					</div>						
+				</div>
+			{% endfor %}
+			<span class="clear"></span>		
+		</aside> -->	
+	<!-- <aside class="sidebar">
+		<div class="module">			
+			<div class="picture" >
+				<a href="/mostpopular?id={{movies3.id}}">
+					<img  title="{{movies3.name}}" src="http://img1.contentapi.ws/{{movies3.thumb_image}}"/>
+				</a>				
+			</div>			
+			<div class="box" ><div >
+				<h2><a style="color: #fff;" href="/mostpopular?id={{movies3.id}}">{{movies3.name}}</a></h2>
+				<div class="description"><a style="color: #fff;" href="/mostpopular?id={{movies3.id}}">{{movies3.description}} {{movies3.upload_date}}</a></div></div>
+				<a style="color: #A0A0A0;" href="/mostpopular?id={{movies3.id}}"> More...</a>
+				<p class="margin20_T social-icons"><a  title="twitter" target="_blank" href="https://twitter.com/themoviecrush"><img   src="/images/twitter.png"></a> <a  title="facebook" target="_blank" href="https://www.facebook.com/pages/The-Movie-Crush/609703552456680"><img src="/images/facebook.png"></a></p>
+			</div>		
+		</div>
+	</aside> -->	
+  </section>
+  <!-- contentarea end -->  
+  <span class="clear"></span> 
+  <div class="bottom-add bottom-add2">
+	<script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=728X90&cwpid=557677&cwwidth=728&cwheight=90&cwpnet=1&cwtagid=197749"></script>
+  </div><!-- Bottom Add end -->	 
+	<footer>
+		<span class="copy left" >
+			<a style="color:#504242;" href="/">Home</a>
+			<a style="color:#504242;" href="/mostpopular?id={{movies5.value.id}}" title="Most Popular"> &nbsp |  Most Popular</a>			
+			<a style="color:#504242;" href="/interviews/{{interviews.value.id}}" title="Celebrity Interview">&nbsp | Celebrity Interview</a>
+			<a style="color:#504242;" href="/more_videos" title="Movie News">&nbsp | Movie News</a>
+			<a style="color:#504242;" href="/music" title="Music">&nbsp | Music</a>
+		</span>
+		<span class="followuson right">Copyright &copy; {% now "Y" %} Moviecrush, All rights reserved | <a href="/termsandconditions">Terms & Conditions</a></span> <span class="clear">			
+		</span>
+	</footer>
+</div>
+</div>
+<!-- container end -->
+</body>
+</html>

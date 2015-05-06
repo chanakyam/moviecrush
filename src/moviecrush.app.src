@@ -1,0 +1,19 @@
+{application, moviecrush,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {modules, []},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  goldrush,
+                  lager,
+                  cowboy,
+                  jsx,
+                  ibrowse,
+                  erlydtl
+                 ]},
+  {mod, { moviecrush_app, []}},
+  {env, []}
+ ]}.
