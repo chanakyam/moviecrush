@@ -49,8 +49,8 @@
         <li> <a   href="/" title="Home"> Home</a></li>
           <li> <a  href="/mostpopular?id={{movies5.value.id}}" title="Most Popular">   Most Popular</a></li>
           <li><a   href="/interviews/{{interviews.value.id}}" title="Celebrity Interview">Celebrity Interview</a></li>
-          <li> <a class="active" href="/more_videos" title="Movie News">Movie News</a></li>
-          <li><a   href="/music" title="Music">Music</a></li>
+          <li> <a  href="/more_videos" title="Latest News">Latest News</a></li>
+          <li><a  class="active" href="/music" title="Music">Music</a></li>
         </ul>
       </div>	  
 	  <div class="social">
@@ -127,7 +127,7 @@
 			<a style="color:#504242;" href="/">Home</a>
 			<a style="color:#504242;" href="/mostpopular?id={{movies5.value.id}}" title="Most Popular"> &nbsp |  Most Popular</a>			
 			<a style="color:#504242;" href="/interviews/{{interviews.value.id}}" title="Celebrity Interview">&nbsp | Celebrity Interview</a>
-			<a style="color:#504242;" href="/more_videos" title="Movie News">&nbsp | Movie News</a>
+			<a style="color:#504242;" href="/more_videos" title="Latest News">&nbsp | Latest News</a>
 			<a style="color:#504242;" href="/music" title="Music">&nbsp | Music</a>
 		</span>
 		<span class="followuson right">Copyright &copy; {% now "Y" %} Moviecrush, All rights reserved | <a href="/termsandconditions">Terms & Conditions</a></span> <span class="clear">			
