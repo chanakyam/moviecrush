@@ -82,7 +82,7 @@
                         <div class="width50 shuffling_videos">
                             <div class="LatestNews-thumb imgClass">
                                 <a  href="/video?id={{n.id}}">
-                                	<img src="http://img1.contentapi.ws/{{n.thumb_image}}"  alt="" title=""/>
+                                	<img src="http://newscdn.lycos.com/world_news/{{n.thumb_image}}"  alt="" title=""/>
                                 	</a>
                                 <a  href="/video?id={{n.id}}"><span class="more_play"></span></a>
                             </div>
@@ -114,7 +114,7 @@
 			{% for n in movies %}
 				<div class="module" >			
 					<div class="picture" >
-						<a  href="/mostpopular?id={{n.value.id}}"> <img  title="{{n.title}}" src="http://img1.contentapi.ws/{{n.value.view_image}}"/></a>
+						<a  href="/mostpopular?id={{n.value.id}}"> <img  title="{{n.title}}" src="http://newscdn.lycos.com/{{n.value.view_image}}"/></a>
 						<p class="social-icons1"><a target="_blank" href="https://twitter.com/themoviecrush" title="twitter"><img src="/images/twitter.png"></a> <a target="_blank" href="https://www.facebook.com/pages/The-Movie-Crush/609703552456680"><img src="/images/facebook.png"></a></p>
 					</div><!-- picture end -->					
 					<div class="box" ><div >

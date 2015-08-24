@@ -18,7 +18,7 @@
 		<!--<script src="/js/ui-bootstrap-tpls-0.6.0.js"></script>-->
 				
 		<style type="text/css">
-			img[src="http://img1.contentapi.ws/"] {
+			img[src="http://newscdn.lycos.com/"] {
 			    display: none;
 			}
 		</style>
@@ -76,7 +76,7 @@
                         <div class="width50 shuffling_videos">
                             <div class="LatestNews-thumb imgClass">
                                 <a  href="/mostpopular?id={{n.value.id}}">
-                                	<img src="http://img1.contentapi.ws/{{n.value.view_image}}"  alt="" title=""/>
+                                	<img src="http://newscdn.lycos.com/{{n.value.view_image}}"  alt="" title=""/>
                                 	</a>
                                 <a  href="/mostpopular?id={{n.value.id}}"></a>
                             </div>
@@ -108,7 +108,7 @@
 				{% for n in interviews1 %}
 					<div class="description livl">
 					  <a href="/interviews/{{n.value.id}}">
-					  <!-- <div class="pickthumb"><img src="http://img1.contentapi.ws/{{n.value.thumb_image}}" /></div> -->
+					  <!-- <div class="pickthumb"><img src="http://newscdn.lycos.com/{{n.value.thumb_image}}" /></div> -->
 					  <div class="picdec">{{n.value.title}} {{n.value.upload_date}}</div></a>
 					  <span class="clear"></span>
 					</div>

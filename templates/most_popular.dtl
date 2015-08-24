@@ -20,7 +20,7 @@
 				};
 		</script>
 		<style type="text/css">
-			img[src="http://img1.contentapi.ws/"] {
+			img[src="http://newscdn.lycos.com/"] {
 			    display: none;
 			}
 		</style>
@@ -77,7 +77,7 @@
       <div class="module">
         <div class="picture">
         	 <a href="/mostpopular?id={{n.value.id}}">
-        	 	<img  title="{{n.value.title}}"  src="http://img1.contentapi.ws/{{n.value.view_image}}" />
+        	 	<img  title="{{n.value.title}}"  src="http://newscdn.lycos.com/{{n.value.view_image}}" />
         	 </a>
         </div>
 		<div class="module-inner">
@@ -120,7 +120,7 @@
 			<div class="module">
 				<div class="module-inner">
 				<div class="most-popular-content">
-					<img src='http://img1.contentapi.ws/{{allnews.base_image}}'>
+					<img src='http://newscdn.lycos.com/{{allnews.base_image}}'>
 				  
 				   <h2 > {{allnews.description}} <script> document.write(epochToDate({{allnews.uploaded_date}})) </script></h2>			  
 				   	{{allnews.news_body}}
@@ -136,7 +136,7 @@
 			<a style="color: #FFFF00;" href="/music">  <!-- <img src="/images/camera.png" class="floatright"/> --> Music</a></div>					
 				<div class="picture">
 					<a href="/mostpopular?id={{imagegallery1.value.id}}"> 
-					<img  id = "gallary-picture" src="http://img1.contentapi.ws/{{imagegallery1.value.view_image}}" />
+					<img  id = "gallary-picture" src="http://newscdn.lycos.com/{{imagegallery1.value.view_image}}" />
 					</a>
 				</div>
 				<div class="box">
@@ -145,7 +145,7 @@
 				</div>
 				<!-- {% for n in imagegallery %}				
 					<div class="picture-thumb">
-						<img src="http://img1.contentapi.ws/{{n.value.thumb_image}}" onclick='showImage("http://img1.contentapi.ws/{{n.value.thumb_image}}")' />
+						<img src="http://newscdn.lycos.com/{{n.value.thumb_image}}" onclick='showImage("http://newscdn.lycos.com/{{n.value.thumb_image}}")' />
 					</div>
 				{% endfor %} -->
 		</div><!-- Photo Gallery end -->			
@@ -162,7 +162,7 @@
 				<div class="picture margin10_T">
 					<div >
 						<a  href="/mostpopular?id={{n.value.id}}">
-							<img  title="{{n.value.title}}" src="http://img1.contentapi.ws/{{n.value.view_image}}"/>
+							<img  title="{{n.value.title}}" src="http://newscdn.lycos.com/{{n.value.view_image}}"/>
 						</a>
 					</div>
 					{% if forloop.counter ==1 %} 
@@ -174,7 +174,7 @@
 		<div class="module">			
 			<div class="picture" >
 				<a href="/mostpopular?id={{movies3.value.id}}">
-					<img  title="{{movies3.value.title}}" src="http://img1.contentapi.ws/{{movies3.value.view_image}}"/>
+					<img  title="{{movies3.value.title}}" src="http://newscdn.lycos.com/{{movies3.value.view_image}}"/>
 				</a>				
 			</div><!-- picture end -->			
 			<div class="box" ><div >
@@ -197,7 +197,7 @@
 			{% if forloop.counter ==1 %}
 				<div class="width50 picture">
 					<a  href="/mostpopular?id={{n.value.id}}">	
-						<img   title="{{n.value.name}}"  src="http://img1.contentapi.ws/{{n.value.thumb_image}}"/>
+						<img   title="{{n.value.name}}"  src="http://newscdn.lycos.com/{{n.value.thumb_image}}"/>
 					</a>
 				</div>
 			{% endif %}					
@@ -212,7 +212,7 @@
 				{% if forloop.counter ==2 %}
 				<div class="width50 picture">
 					<a  href="/mostpopular?id={{n.value.id}}">	
-						<img   title="{{n.value.name}}"  src="http://img1.contentapi.ws/{{n.value.thumb_image}}"/>
+						<img   title="{{n.value.name}}"  src="http://newscdn.lycos.com/{{n.value.thumb_image}}"/>
 					</a>
 				</div>
 			{% endif %}						
@@ -223,7 +223,7 @@
 		 <div class="module">			
 			<div class="picture" >
 				<a href="/mostpopular?id={{movies3.value.id}}">
-					<img  title="{{movies3.value.name}}" src="http://img1.contentapi.ws/{{movies3.value.thumb_image}}"/>
+					<img  title="{{movies3.value.name}}" src="http://newscdn.lycos.com/{{movies3.value.thumb_image}}"/>
 				</a>				
 			</div>			
 			<div class="box" ><div >
